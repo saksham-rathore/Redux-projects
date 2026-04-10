@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  messages: [],
-  status: "idle",
+  messages: [
+    { id: 1, text: "Hello 👋", sender: "bot" },
+    { id: 2, text: "Hi! How are you?", sender: "user" },
+  ],
 };
 
 const chatSlice = createSlice({
