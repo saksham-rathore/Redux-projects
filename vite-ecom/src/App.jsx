@@ -3,16 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { sendMessage } from './Store/Chatslice';
 
 function App() {
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
   const dispatch = useDispatch();
   const messages = useSelector((state) => state.chat.messages);
 
-  const handleSend = () => {
-    dispatch(sendMessage("hello"));
-  }
-
-  const handleReceive = () => {
-    dispatch(receiveMessage("hello"));
-  }
+  
 
   return (
     <div className='flex justify-center items-center h-screen w-screen'>
