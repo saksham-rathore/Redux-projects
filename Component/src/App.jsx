@@ -1,20 +1,38 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrease, increase } from "./Redux/counter";
+import { addToCart } from "./Redux/Addtocartslice";
+import { useNavigate } from "react-router-dom";
+import AddCart from "./AddCart";
 
 function App() {
-  // const [Quantity, setQuantity] = useState(1)
+  // const [Cart, setCart] = useState([])
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const counter = useSelector((state) => state.counter.value);
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+    // Optional: navigate to cart after adding
+    // navigate("/AddCart");
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 lg:p-10 font-sans">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Side: Shopping Cart */}
         <div className="lg:col-span-2">
-          <h1 className="text-3xl font-bold text-gray-800 mb-8">
-            Shopping Cart
-          </h1>
+          <div className="flex justify-between items-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800">
+              Product List
+            </h1>
+            <button 
+              onClick={() => navigate('/AddCart')}
+              className="bg-indigo-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-200"
+            >
+              View Cart
+            </button>
+          </div>
 
           <div className="space-y-6">
             {/* Item 1 */}
@@ -50,7 +68,16 @@ function App() {
                       +
                     </button>
                   </div>
-                  <button className="rounded-xl p-1 bg-purple-400">
+                  <button 
+                    className="rounded-xl p-2 bg-purple-400 text-white font-semibold hover:bg-purple-500 transition-colors" 
+                    onClick={() => handleAddToCart({
+                      id: "order1234-1",
+                      name: "Dark Denim Shirt",
+                      price: 120,
+                      quantity: counter,
+                      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=200"
+                    })}
+                  >
                     Add to cart
                   </button>
                   <span className="text-indigo-600 font-bold text-lg">
@@ -92,7 +119,16 @@ function App() {
                       +
                     </button>
                   </div>
-                  <button className="rounded-xl p-1 bg-purple-400">
+                  <button 
+                    className="rounded-xl p-2 bg-purple-400 text-white font-semibold hover:bg-purple-500 transition-colors" 
+                    onClick={() => handleAddToCart({
+                      id: "order1234-2",
+                      name: "Denim Trendy Jacket",
+                      price: 120,
+                      quantity: counter,
+                      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=200"
+                    })}
+                  >
                     Add to cart
                   </button>
 
@@ -136,7 +172,16 @@ function App() {
                       +
                     </button>
                   </div>
-                  <button className="rounded-xl p-1 bg-purple-400">
+                  <button 
+                    className="rounded-xl p-2 bg-purple-400 text-white font-semibold hover:bg-purple-500 transition-colors" 
+                    onClick={() => handleAddToCart({
+                      id: "order1234-3",
+                      name: "Retro Shirt For Women",
+                      price: 220,
+                      quantity: counter,
+                      image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=200"
+                    })}
+                  >
                     Add to cart
                   </button>
 

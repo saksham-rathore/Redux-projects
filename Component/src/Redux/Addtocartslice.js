@@ -7,10 +7,9 @@ const initialState = {
 const cartSlice = createSlice({
     name: "cart",
     initialState,
-    value: 0,
     reducers: {
         addToCart: (state, action) => {
-            addToCart.state.push({
+            state.cart.push({
                 id: action.payload.id,
                 name: action.payload.name,
                 price: action.payload.price,
@@ -19,14 +18,12 @@ const cartSlice = createSlice({
             })
         },
         removeCart: (state, action) => {
-            removeCart.state.filter(
+            state.cart = state.cart.filter(
                 (item) => item.id !== action.payload
             )
         },
-        clearCart: (state, action) => {
-            clearCart.state.filter(
-                (items) => items.id !== action.payload
-            )
+        clearCart: (state) => {
+            state.cart = [];
         }
     }
 });
