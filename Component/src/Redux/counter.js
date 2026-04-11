@@ -13,7 +13,9 @@ const Counterslice = createSlice({
             state.value += 1
         },
         decrease: (state) => {
-            state.value -= 1
+            if(state.value > 0) {
+                state.value -= 1;
+            }
         }
     }
 })
