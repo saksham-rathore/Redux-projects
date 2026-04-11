@@ -11,12 +11,12 @@ function App() {
   const handleSend = () => {
     if (!input.trim()) return;
 
-    dispatch(chatSlice.actions.sendMessage(input));
+    // dispatch(chatSlice.actions.sendMessage(input));
     setTyping(true);
 
     // Fake bot reply
     setTimeout(() => {
-      dispatch(chatSlice.actions.receiveMessage("Got it 👍"));
+      // dispatch(chatSlice.actions.receiveMessage("Got it 👍"));
       setTyping(false);
     }, 800);
 
