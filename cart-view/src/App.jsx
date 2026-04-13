@@ -1,10 +1,13 @@
+import React from "react";
 import Products from "./Components/Products";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
-  const cartItems = useSelector((state) => state.cart.items);
-  const navigate = useNavigate();
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount(prev => prev + 1);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -13,10 +16,7 @@ function App() {
         <h1 className="text-3xl font-black text-gray-900 tracking-tighter">
           SAMMY<span className="text-blue-600">.</span>
         </h1>
-        <button 
-          onClick={() => navigate("/Cart")}
-          className="relative group p-2 rounded-full hover:bg-gray-100 transition-colors"
-        >
+        <button className="relative group p-2 rounded-full hover:bg-gray-100 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8 text-gray-700"
@@ -33,7 +33,7 @@ function App() {
           </svg>
           <span
             className="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-white">
-              {cartItems.length}
+              {cartCount}
           </span>
         </button>
       </nav>
@@ -52,10 +52,10 @@ function App() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <Products productName="shirt" />
-          <Products productName="Pant" />
-          <Products productName="Tie" />
-          <Products productName="Belt" />
+          <Products productName="shirt" onAddToCart={handleAddToCart}/>
+          <Products productName="Pant" onAddToCart={handleAddToCart}/>
+          <Products productName="Tie" onAddToCart={handleAddToCart}/>
+          <Products productName="Belt" onAddToCart={handleAddToCart}/>
         </div>
       </main>
 
