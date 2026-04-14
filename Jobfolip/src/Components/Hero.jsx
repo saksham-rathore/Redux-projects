@@ -3,11 +3,12 @@ import React from "react";
 function Hero() {
   return (
     <div className="flex flex-col justify-center items-center mt-48 px-4 text-center">
-      <div className="glass border border-gray-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.03)] px-5 py-1.5 rounded-full mb-10 animate-soft-up">
-        <span className="text-[12px] font-bold tracking-widest text-gray-500 bit-font uppercase">
+      <div className="glass border border-gray-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.03)] px-5 py-1.5 rounded-full mb-10 animate-soft-up shining-wrapper">
+        <span className="relative z-10 text-[12px] font-bold tracking-widest text-gray-500 bit-font uppercase">
           Revolutionizing Job Search
         </span>
       </div>
+
 
       <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 max-w-4xl leading-[1.1] mb-8 animate-soft-up delay-100">
         Find Jobs{" "}

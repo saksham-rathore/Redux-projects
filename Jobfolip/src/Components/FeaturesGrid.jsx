@@ -3,54 +3,79 @@ import React from 'react'
 function FeaturesGrid() {
   const features = [
     {
-      title: "Smart Matching",
-      description: "Our AI-driven engine analyzes your profile to find jobs that perfectly align with your career goals.",
-      icon: "🎯"
+      number: "01",
+      title: "AI Matching",
+      description: "Deep semantic analysis aligns your unique profile with opportunities that truly fit.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      )
     },
     {
-      title: "Quick Apply",
-      description: "Apply to multiple positions with just one click using your unified Jobfolio profile.",
-      icon: "⚡"
+      number: "02",
+      title: "Smart Insights",
+      description: "Real-time market intelligence and compensation benchmarks at your fingertips.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        </svg>
+      )
     },
     {
-      title: "Salary Insights",
-      description: "Get real-time data on market rates for your position and experience level.",
-      icon: "📊"
+      number: "03",
+      title: "Career Pathfinding",
+      description: "Personalized roadmaps that guide your next step with clarity and precision.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      )
     }
   ]
 
   return (
     <div className="mt-32 mb-40 px-4">
       <div className="text-center mb-16 animate-soft-up delay-300">
-        <h2 className="text-3xl font-bold bit-font tracking-tight mb-4">Why Jobfolio?</h2>
-        <p className="text-gray-500 max-w-lg mx-auto">Experience the future of recruiting with features designed for the modern workforce.</p>
+        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-4 block">Why Jobfolio</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 bit-font mb-6">The future of recruiting</h2>
+        <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+          Experience features designed for the modern workforce — precision, elegance, results.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-100 rounded-[2.5rem] overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.02)]">
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className={`group p-10 rounded-[2.5rem] bg-white border border-gray-100/50 shadow-[0_20px_40px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(37,38,50,0.06)] hover:-translate-y-2 transition-all duration-500 animate-soft-up ${
-              index === 0 ? 'delay-100' : index === 1 ? 'delay-200' : 'delay-300'
-            }`}
+            className={`group p-12 flex flex-col items-start transition-all duration-500 animate-soft-up ${
+              index !== features.length - 1 ? 'md:border-r border-gray-100' : ''
+            } hover:bg-gray-50`}
           >
-            <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-white group-hover:rotate-6 transition-all duration-500">
+            <div className="text-[11px] font-bold text-gray-300 mb-8 tracking-widest">{feature.number}</div>
+            <div className="w-12 h-12 border border-gray-200 rounded-lg flex items-center justify-center text-gray-900 mb-8 group-hover:scale-110 transition-transform duration-500 bg-white">
               {feature.icon}
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4 bit-font tracking-tight">
               {feature.title}
             </h3>
-            <p className="text-gray-500 leading-relaxed text-sm body-font">
+            <p className="text-gray-400 leading-relaxed text-[13px] font-medium">
               {feature.description}
             </p>
-            <div className="mt-10 flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors">
+            <div className="mt-12 flex items-center text-[11px] font-bold uppercase tracking-widest text-gray-300 group-hover:text-black transition-colors cursor-pointer">
               Explore <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
             </div>
           </div>
         ))}
       </div>
+      
+      <div className="flex justify-center mt-12 animate-bounce">
+        <div className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-gray-400">
+          ↓
+        </div>
+      </div>
     </div>
   )
 }
 
-export default FeaturesGrid
+export default FeaturesGrid;

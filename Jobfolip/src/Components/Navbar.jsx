@@ -19,10 +19,11 @@ function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button className="bg-black text-white px-5 py-2 rounded-full text-[13px] font-semibold hover:bg-gray-800 transition-all shadow-sm">
-            Sign In
+          <button className="bg-black text-white px-5 py-2 rounded-full text-[13px] font-semibold hover:bg-gray-800 transition-all shadow-sm shining-wrapper">
+             <span className="relative z-10">Sign In</span>
           </button>
         </div>
+
       </div>
     </nav>
   );
