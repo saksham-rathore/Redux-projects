@@ -38,11 +38,12 @@ function FeaturesGrid() {
     <div className="mt-32 mb-40 px-4">
       <div className="text-center mb-16 animate-soft-up delay-300">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-4 block">Why Jobfolio</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 bit-font mb-6">The future of recruiting</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-gray-900 bit-font mb-6 tracking-[-0.07em] leading-[0.85] uppercase">The future of recruiting</h2>
         <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
           Experience features designed for the modern workforce — precision, elegance, results.
         </p>
       </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-100 rounded-[2.5rem] overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.02)]">
         {features.map((feature, index) => (

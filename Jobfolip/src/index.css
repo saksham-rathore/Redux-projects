@@ -140,11 +140,19 @@ body {
   animation: flip 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   transform-origin: top;
 }.text-gradient {
-  background: linear-gradient(180deg, #000000 0%, #a1a1a1 100%);
+  background: linear-gradient(180deg, #111111 0%, #666666 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
+
+.text-gradient-subtle {
+  background: linear-gradient(180deg, #111111 0%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }

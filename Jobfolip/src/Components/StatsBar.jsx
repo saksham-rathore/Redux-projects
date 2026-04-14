@@ -13,9 +13,10 @@ function StatsBar() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
         {stats.map((stat, index) => (
           <div key={index} className={`text-center ${index !== stats.length - 1 ? 'md:border-r border-gray-100' : ''}`}>
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 bit-font mb-2">{stat.value}</div>
+            <div className="text-3xl md:text-5xl font-black text-gray-900 bit-font mb-2 tracking-[-0.07em] leading-none">{stat.value}</div>
             <div className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 heading-font">{stat.label}</div>
           </div>
+
         ))}
       </div>
     </div>

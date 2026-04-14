@@ -62,9 +62,10 @@ function Reviews() {
     <div className="py-24 overflow-hidden bg-white shadow-[0_-1px_3px_rgba(0,0,0,0.02),0_1px_3px_rgba(0,0,0,0.02)] relative">
       <div className="text-center mb-16 px-4">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-4 block">Testimonials</span>
-        <h2 className="text-4xl font-bold bit-font text-gray-900 mb-6">Trusted by the best</h2>
+        <h2 className="text-4xl font-black bit-font text-gray-900 mb-6 tracking-[-0.07em] leading-[0.85] uppercase">Trusted by the best</h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm">Join thousands of professionals finding their dream roles every day.</p>
       </div>
+
 
       <div className="relative">
         {/* Side Gradients for Fade Effect */}
