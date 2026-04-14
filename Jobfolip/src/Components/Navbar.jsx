@@ -2,31 +2,31 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="flex justify-between items-center rounded-full mt-5 px-2">
-      <div>
-        <img src="./public/Jobfolio.png" alt="logo" />
-      </div>
+    <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <div className="w-full max-w-[900px] glass rounded-full px-4 py-1 flex justify-between items-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100/50">
+        <div className="flex items-center gap-3">
+          <div className="w-34 h-auto flex items-center justify-center">
+             <img src="./public/Jobfolio.png" alt="logo" className="w-full h-full object-contain" />
+          </div>
+        </div>
 
-      <div className="flex gap-8 list-none text-gray-700 heading-font">
-        <li>Features</li>
-        <li>How it works</li>
-        <li>Reviews</li>
-      </div>
 
-      <div>
-        <button
-          className=" bg-gradient-to-b from-gray-600 to-black 
-  text-white 
-  px-6 py-2 
-  rounded-full 
-  shadow-[0_2px_10px_rgba(0,0,0,0.6)] 
-  border border-gray-600"
-        >
-          Get Started
-        </button>
+
+        <ul className="hidden md:flex gap-10 text-[13px] font-medium text-gray-500 heading-font">
+          <li className="hover:text-black cursor-pointer transition-colors duration-200">Features</li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200">Solutions</li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200">Pricing</li>
+        </ul>
+
+        <div className="flex items-center gap-4">
+          <button className="bg-black text-white px-5 py-2 rounded-full text-[13px] font-semibold hover:bg-gray-800 transition-all shadow-sm">
+            Sign In
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
 export default Navbar;
+
