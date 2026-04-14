@@ -4,6 +4,7 @@ import Hero from './Components/Hero'
 import StatsBar from './Components/StatsBar'
 import FeaturesGrid from './Components/FeaturesGrid'
 import Reviews from './Components/Reviews'
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <FeaturesGrid />
       </div>
       <Reviews />
+      <Footer />
     </main>
   )
 }
