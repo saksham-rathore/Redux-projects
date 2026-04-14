@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
+
   --primary: #000000;
   --secondary: #64748b;
   --accent: #3b82f6;
