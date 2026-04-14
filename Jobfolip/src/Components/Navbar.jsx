@@ -7,7 +7,7 @@ function Navbar() {
         <img src="./public/Jobfolio.png" alt="logo" />
       </div>
 
-      <div className="flex gap-8 list-none text-gray-700">
+      <div className="flex gap-8 list-none text-gray-700 heading-font">
         <li>Features</li>
         <li>How it works</li>
         <li>Reviews</li>

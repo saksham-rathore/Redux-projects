@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+.heading-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+.body-font {
+  font-family: 'Inter', sans-serif;
+}
+
+@font-face {
+  font-family: 'Bitcount';
+  src: url('./assets/fonts/BitcountGridDouble.ttf') format('truetype');
+}
+
+.bit-font {
+  font-family: 'Bitcount', sans-serif;
+}
