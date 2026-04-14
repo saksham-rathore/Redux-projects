@@ -16,7 +16,7 @@ function Hero() {
         <h1 className="text-[60px] md:text-[110px] font-black tracking-[-0.07em] leading-[0.85] text-gray-900 animate-soft-up delay-100 uppercase">
           Find jobs
         </h1>
-        <h1 className="text-[60px] md:text-[110px] font-black tracking-[-0.07em] leading-[0.85] text-gray-400/70 animate-soft-up delay-200 uppercase">
+        <h1 className="text-[60px] md:text-[110px] font-black tracking-[-0.07em] leading-[0.85] text-gradient animate-soft-up delay-200 uppercase">
           that actually
         </h1>
         <h1 className="text-[60px] md:text-[110px] font-black tracking-[-0.07em] leading-[0.85] text-gray-900 animate-soft-up delay-300 uppercase">
